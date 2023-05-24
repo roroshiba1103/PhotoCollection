@@ -9,12 +9,15 @@ import UIKit
 
 class SelectCameraTableViewCell: UITableViewCell {
     
+    //let cameraArray: Array = ["Canon", "Nikon", "SONY", "FUJIFILM", "Panasonic", "OLYMPUS", "PENTAX", "LEICA", "Hasselblad"]
+    
     @IBOutlet weak var cameraLabel: UILabel!
     @IBOutlet weak var cameraImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

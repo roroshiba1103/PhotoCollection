@@ -64,7 +64,7 @@ Cg
                     </view>
                     <tabBarItem key="tabBarItem" title="写真追加" image="plus.rectangle.fill.on.rectangle.fill" catalog="system" id="cIM-IO-CQR"/>
                     <connections>
-                        <outlet property="selectCameraTableView" destination="hGM-4p-uPE" id="n28-Tq-dm9"/>
+                        <outlet property="selectCameraTableView" destination="hGM-4p-uPE" id="pWs-Wy-HpH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KOA-0P-yDP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -199,7 +199,7 @@ Cg
                     </view>
                     <tabBarItem key="tabBarItem" title="メーカー別写真" image="camera.on.rectangle.fill" catalog="system" id="LIL-EJ-7En"/>
                     <connections>
-                        <outlet property="cameraTableView" destination="E8v-FE-2mT" id="9i9-jQ-CG1"/>
+                        <outlet property="cameraTableView" destination="E8v-FE-2mT" id="28R-Hd-Tso"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g7g-pc-KnP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
