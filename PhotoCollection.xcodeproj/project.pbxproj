@@ -14,10 +14,12 @@
 		5E50E5232A19F32B00FF43D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E50E5222A19F32B00FF43D4 /* Assets.xcassets */; };
 		5E50E5262A19F32B00FF43D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E50E5242A19F32B00FF43D4 /* LaunchScreen.storyboard */; };
 		5E50E52E2A1A0B9600FF43D4 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50E52D2A1A0B9500FF43D4 /* PhotoCollectionViewController.swift */; };
-		5E50E5302A1A0C1100FF43D4 /* SelectCameraTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50E52F2A1A0C1100FF43D4 /* SelectCameraTableViewController.swift */; };
-		5E50E5322A1A0C2900FF43D4 /* CameraTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50E5312A1A0C2900FF43D4 /* CameraTableViewController.swift */; };
 		5E50E5342A1A160000FF43D4 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50E5332A1A160000FF43D4 /* ImageViewController.swift */; };
 		5E50E5362A1A187100FF43D4 /* CameraPhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50E5352A1A187100FF43D4 /* CameraPhotoCollectionViewController.swift */; };
+		5E50E5382A1E0C2C00FF43D4 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50E5372A1E0C2C00FF43D4 /* CameraViewController.swift */; };
+		5E50E53A2A1E0C3D00FF43D4 /* SelectCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50E5392A1E0C3D00FF43D4 /* SelectCameraViewController.swift */; };
+		5E50E53D2A1E184600FF43D4 /* SelectCameraTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50E53B2A1E184600FF43D4 /* SelectCameraTableViewCell.swift */; };
+		5E50E53E2A1E184600FF43D4 /* SelectCameraTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E50E53C2A1E184600FF43D4 /* SelectCameraTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +32,12 @@
 		5E50E5252A19F32B00FF43D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E50E5272A19F32B00FF43D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E50E52D2A1A0B9500FF43D4 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
-		5E50E52F2A1A0C1100FF43D4 /* SelectCameraTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCameraTableViewController.swift; sourceTree = "<group>"; };
-		5E50E5312A1A0C2900FF43D4 /* CameraTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraTableViewController.swift; sourceTree = "<group>"; };
 		5E50E5332A1A160000FF43D4 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		5E50E5352A1A187100FF43D4 /* CameraPhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPhotoCollectionViewController.swift; sourceTree = "<group>"; };
+		5E50E5372A1E0C2C00FF43D4 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		5E50E5392A1E0C3D00FF43D4 /* SelectCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCameraViewController.swift; sourceTree = "<group>"; };
+		5E50E53B2A1E184600FF43D4 /* SelectCameraTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCameraTableViewCell.swift; sourceTree = "<group>"; };
+		5E50E53C2A1E184600FF43D4 /* SelectCameraTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectCameraTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,10 +78,12 @@
 				5E50E5242A19F32B00FF43D4 /* LaunchScreen.storyboard */,
 				5E50E5272A19F32B00FF43D4 /* Info.plist */,
 				5E50E52D2A1A0B9500FF43D4 /* PhotoCollectionViewController.swift */,
-				5E50E52F2A1A0C1100FF43D4 /* SelectCameraTableViewController.swift */,
-				5E50E5312A1A0C2900FF43D4 /* CameraTableViewController.swift */,
 				5E50E5332A1A160000FF43D4 /* ImageViewController.swift */,
 				5E50E5352A1A187100FF43D4 /* CameraPhotoCollectionViewController.swift */,
+				5E50E5372A1E0C2C00FF43D4 /* CameraViewController.swift */,
+				5E50E5392A1E0C3D00FF43D4 /* SelectCameraViewController.swift */,
+				5E50E53B2A1E184600FF43D4 /* SelectCameraTableViewCell.swift */,
+				5E50E53C2A1E184600FF43D4 /* SelectCameraTableViewCell.xib */,
 			);
 			path = PhotoCollection;
 			sourceTree = "<group>";
@@ -142,6 +148,7 @@
 			files = (
 				5E50E5262A19F32B00FF43D4 /* LaunchScreen.storyboard in Resources */,
 				5E50E5232A19F32B00FF43D4 /* Assets.xcassets in Resources */,
+				5E50E53E2A1E184600FF43D4 /* SelectCameraTableViewCell.xib in Resources */,
 				5E50E5212A19F32900FF43D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,12 +161,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E50E51E2A19F32900FF43D4 /* ViewController.swift in Sources */,
-				5E50E5302A1A0C1100FF43D4 /* SelectCameraTableViewController.swift in Sources */,
 				5E50E5362A1A187100FF43D4 /* CameraPhotoCollectionViewController.swift in Sources */,
-				5E50E5322A1A0C2900FF43D4 /* CameraTableViewController.swift in Sources */,
 				5E50E5342A1A160000FF43D4 /* ImageViewController.swift in Sources */,
 				5E50E51A2A19F32900FF43D4 /* AppDelegate.swift in Sources */,
+				5E50E53D2A1E184600FF43D4 /* SelectCameraTableViewCell.swift in Sources */,
+				5E50E5382A1E0C2C00FF43D4 /* CameraViewController.swift in Sources */,
 				5E50E51C2A19F32900FF43D4 /* SceneDelegate.swift in Sources */,
+				5E50E53A2A1E0C3D00FF43D4 /* SelectCameraViewController.swift in Sources */,
 				5E50E52E2A1A0B9600FF43D4 /* PhotoCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
