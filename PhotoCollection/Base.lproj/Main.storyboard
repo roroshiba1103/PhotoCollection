@@ -14,7 +14,7 @@
             <objects>
                 <viewController id="Vm6-dJ-nPS" customClass="SelectCameraViewController" customModule="PhotoCollection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SSV-kH-KzO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="802"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hGM-4p-uPE">
@@ -62,14 +62,15 @@ Cg
                         <viewLayoutGuide key="safeArea" id="G29-zx-9HN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="写真追加" image="plus.rectangle.fill.on.rectangle.fill" catalog="system" id="cIM-IO-CQR"/>
+                    <tabBarItem key="tabBarItem" title="写真追加" image="plus.rectangle.fill.on.rectangle.fill" catalog="system" id="ZI3-vf-ugi"/>
+                    <navigationItem key="navigationItem" id="bG8-BG-4NC"/>
                     <connections>
                         <outlet property="selectCameraTableView" destination="hGM-4p-uPE" id="pWs-Wy-HpH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KOA-0P-yDP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="120.8" y="724.8768472906404"/>
+            <point key="canvasLocation" x="121" y="725"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -98,15 +99,21 @@ Cg
                                 <buttonConfiguration key="configuration" style="plain" title="キャンセル">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Vm6-dJ-nPS" kind="show" id="zg7-Pm-7M9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="Jeu-R7-fXm" id="M3O-dk-imV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1109.5999999999999" y="724.8768472906404"/>
+            <point key="canvasLocation" x="1110" y="725"/>
         </scene>
         <!--写真一覧-->
         <scene sceneID="YmG-tt-aFs">
@@ -252,8 +259,8 @@ Cg
                     </tabBar>
                     <connections>
                         <segue destination="gVL-qD-PtV" kind="relationship" relationship="viewControllers" id="feb-rg-bvJ"/>
-                        <segue destination="Vm6-dJ-nPS" kind="relationship" relationship="viewControllers" id="0E5-QY-JrU"/>
-                        <segue destination="klV-Ha-Huc" kind="relationship" relationship="viewControllers" id="jCa-a1-t9X"/>
+                        <segue destination="Vm6-dJ-nPS" kind="relationship" relationship="viewControllers" id="RsB-wg-imP"/>
+                        <segue destination="klV-Ha-Huc" kind="relationship" relationship="viewControllers" id="HZi-Ab-3yT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHf-PN-y6V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -261,6 +268,9 @@ Cg
             <point key="canvasLocation" x="-884" y="4"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="zg7-Pm-7M9"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="camera.on.rectangle.fill" catalog="system" width="128" height="98"/>
         <image name="photo.fill.on.rectangle.fill" catalog="system" width="128" height="98"/>

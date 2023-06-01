@@ -7,14 +7,31 @@
 
 import UIKit
 
-class ImageViewController: UIViewController {
+class ImageViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
+    @IBOutlet var photoImageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.shadowImage = UIImage()
 
         // Do any additional setup after loading the view.
     }
     
+    func presentPickerController(sourceType: UIImagePickerController.SourceType) {
+        if UIImagePickerController.isSourceTypeAvailable(sourceType) {
+            let picker = UIImagePickerController()
+            picker.sourceType = sourceType
+            picker.delegate = self
+            self.present(picker, animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        self.dismiss(animated: true, completion: nil)
+        photoImageView.image = info[.originalImage] as? UIImage
+    }
 
     /*
     // MARK: - Navigation

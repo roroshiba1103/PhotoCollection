@@ -30,6 +30,7 @@
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="cameraImage" destination="ziQ-PK-Qra" id="1Mh-7l-Ax9"/>
                 <outlet property="cameraLabel" destination="cbL-l0-QO4" id="yiv-Sz-Snj"/>
