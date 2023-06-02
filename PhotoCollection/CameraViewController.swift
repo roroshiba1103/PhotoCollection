@@ -31,6 +31,10 @@ class CameraViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.contentView.backgroundColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.0)
         return cell
     }
+    
+    func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toCameraPhotoViewController",sender: nil)
+    }
 
     /*
     // MARK: - Navigation

@@ -15,11 +15,11 @@
 		5E50E5262A19F32B00FF43D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E50E5242A19F32B00FF43D4 /* LaunchScreen.storyboard */; };
 		5E50E52E2A1A0B9600FF43D4 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50E52D2A1A0B9500FF43D4 /* PhotoCollectionViewController.swift */; };
 		5E50E5342A1A160000FF43D4 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50E5332A1A160000FF43D4 /* ImageViewController.swift */; };
-		5E50E5362A1A187100FF43D4 /* CameraPhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50E5352A1A187100FF43D4 /* CameraPhotoCollectionViewController.swift */; };
 		5E50E5382A1E0C2C00FF43D4 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50E5372A1E0C2C00FF43D4 /* CameraViewController.swift */; };
 		5E50E53A2A1E0C3D00FF43D4 /* SelectCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50E5392A1E0C3D00FF43D4 /* SelectCameraViewController.swift */; };
 		5E50E53D2A1E184600FF43D4 /* SelectCameraTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50E53B2A1E184600FF43D4 /* SelectCameraTableViewCell.swift */; };
 		5E50E53E2A1E184600FF43D4 /* SelectCameraTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E50E53C2A1E184600FF43D4 /* SelectCameraTableViewCell.xib */; };
+		5E87008B2A295D9E00703AD7 /* CameraPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E87008A2A295D9E00703AD7 /* CameraPhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,11 +33,11 @@
 		5E50E5272A19F32B00FF43D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E50E52D2A1A0B9500FF43D4 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
 		5E50E5332A1A160000FF43D4 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
-		5E50E5352A1A187100FF43D4 /* CameraPhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPhotoCollectionViewController.swift; sourceTree = "<group>"; };
 		5E50E5372A1E0C2C00FF43D4 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		5E50E5392A1E0C3D00FF43D4 /* SelectCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCameraViewController.swift; sourceTree = "<group>"; };
 		5E50E53B2A1E184600FF43D4 /* SelectCameraTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCameraTableViewCell.swift; sourceTree = "<group>"; };
 		5E50E53C2A1E184600FF43D4 /* SelectCameraTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectCameraTableViewCell.xib; sourceTree = "<group>"; };
+		5E87008A2A295D9E00703AD7 /* CameraPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,10 +78,10 @@
 				5E50E5242A19F32B00FF43D4 /* LaunchScreen.storyboard */,
 				5E50E5272A19F32B00FF43D4 /* Info.plist */,
 				5E50E52D2A1A0B9500FF43D4 /* PhotoCollectionViewController.swift */,
-				5E50E5332A1A160000FF43D4 /* ImageViewController.swift */,
-				5E50E5352A1A187100FF43D4 /* CameraPhotoCollectionViewController.swift */,
-				5E50E5372A1E0C2C00FF43D4 /* CameraViewController.swift */,
 				5E50E5392A1E0C3D00FF43D4 /* SelectCameraViewController.swift */,
+				5E50E5332A1A160000FF43D4 /* ImageViewController.swift */,
+				5E50E5372A1E0C2C00FF43D4 /* CameraViewController.swift */,
+				5E87008A2A295D9E00703AD7 /* CameraPhotoViewController.swift */,
 				5E50E53B2A1E184600FF43D4 /* SelectCameraTableViewCell.swift */,
 				5E50E53C2A1E184600FF43D4 /* SelectCameraTableViewCell.xib */,
 			);
@@ -161,7 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E50E51E2A19F32900FF43D4 /* ViewController.swift in Sources */,
-				5E50E5362A1A187100FF43D4 /* CameraPhotoCollectionViewController.swift in Sources */,
+				5E87008B2A295D9E00703AD7 /* CameraPhotoViewController.swift in Sources */,
 				5E50E5342A1A160000FF43D4 /* ImageViewController.swift in Sources */,
 				5E50E51A2A19F32900FF43D4 /* AppDelegate.swift in Sources */,
 				5E50E53D2A1E184600FF43D4 /* SelectCameraTableViewCell.swift in Sources */,
@@ -315,13 +315,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R8N4BX3TQN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoCollection/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "アプリに保存する画像をフォトライブラリから呼び出します";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -342,13 +345,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R8N4BX3TQN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoCollection/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "アプリに保存する画像をフォトライブラリから呼び出します";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -43,7 +43,26 @@ class SelectCameraViewController: UIViewController, UITableViewDelegate, UITable
         return cell
     }
     
+    /*
+    func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
+        selectedImage = UIImage(named: imgArray[indexPath.row] as! String)
+        if selectedImage != nil {
+            performSegue(withIdentifier: "toSubViewController",sender: nil)
+        }
+    }
+    */
     
+    func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toImageViewController",sender: nil)
+    }
+    /*
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "toSubViewController") {
+            let subVC: SubViewController = (segue.destination as? SubViewController)!
+            subVC.selectedImg = selectedImage
+        }
+    }
+    */
 
     /*
     // MARK: - Navigation

@@ -15,7 +15,8 @@ class ImageViewController: UIViewController, UINavigationControllerDelegate, UII
         super.viewDidLoad()
         
         navigationController?.navigationBar.shadowImage = UIImage()
-
+        
+        presentPickerController(sourceType: .photoLibrary)
         // Do any additional setup after loading the view.
     }
     
@@ -31,6 +32,10 @@ class ImageViewController: UIViewController, UINavigationControllerDelegate, UII
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         self.dismiss(animated: true, completion: nil)
         photoImageView.image = info[.originalImage] as? UIImage
+    }
+    
+    @IBAction func onTappedButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
 
     /*
