@@ -53,7 +53,7 @@ class SelectCameraViewController: UIViewController, UITableViewDelegate, UITable
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         if (segue.identifier == "toImageViewController") {
             let imgVC: ImageViewController = (segue.destination as? ImageViewController)!
-            imgVC.selectedMakerNumber = selectedNumber
+            imgVC.selectedMakerNumber = selectedNumber!
         }
     }
     

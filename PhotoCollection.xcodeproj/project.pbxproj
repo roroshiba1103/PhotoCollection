@@ -13,7 +13,6 @@
 		5E50E5212A19F32900FF43D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E50E51F2A19F32900FF43D4 /* Main.storyboard */; };
 		5E50E5232A19F32B00FF43D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E50E5222A19F32B00FF43D4 /* Assets.xcassets */; };
 		5E50E5262A19F32B00FF43D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E50E5242A19F32B00FF43D4 /* LaunchScreen.storyboard */; };
-		5E50E52E2A1A0B9600FF43D4 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50E52D2A1A0B9500FF43D4 /* PhotoCollectionViewController.swift */; };
 		5E50E5342A1A160000FF43D4 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50E5332A1A160000FF43D4 /* ImageViewController.swift */; };
 		5E50E5382A1E0C2C00FF43D4 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50E5372A1E0C2C00FF43D4 /* CameraViewController.swift */; };
 		5E50E53A2A1E0C3D00FF43D4 /* SelectCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50E5392A1E0C3D00FF43D4 /* SelectCameraViewController.swift */; };
@@ -23,6 +22,7 @@
 		5E87008E2A2AE03D00703AD7 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 5E87008D2A2AE03D00703AD7 /* Realm */; };
 		5E8700902A2AE03D00703AD7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5E87008F2A2AE03D00703AD7 /* RealmSwift */; };
 		5E8700922A2AF05C00703AD7 /* PhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8700912A2AF05C00703AD7 /* PhotoItem.swift */; };
+		5E8700942A2B1A2800703AD7 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8700932A2B1A2700703AD7 /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,6 @@
 		5E50E5222A19F32B00FF43D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E50E5252A19F32B00FF43D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E50E5272A19F32B00FF43D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5E50E52D2A1A0B9500FF43D4 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
 		5E50E5332A1A160000FF43D4 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		5E50E5372A1E0C2C00FF43D4 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		5E50E5392A1E0C3D00FF43D4 /* SelectCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCameraViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +41,7 @@
 		5E50E53C2A1E184600FF43D4 /* SelectCameraTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectCameraTableViewCell.xib; sourceTree = "<group>"; };
 		5E87008A2A295D9E00703AD7 /* CameraPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPhotoViewController.swift; sourceTree = "<group>"; };
 		5E8700912A2AF05C00703AD7 /* PhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItem.swift; sourceTree = "<group>"; };
+		5E8700932A2B1A2700703AD7 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,7 @@
 				5E50E5222A19F32B00FF43D4 /* Assets.xcassets */,
 				5E50E5242A19F32B00FF43D4 /* LaunchScreen.storyboard */,
 				5E50E5272A19F32B00FF43D4 /* Info.plist */,
-				5E50E52D2A1A0B9500FF43D4 /* PhotoCollectionViewController.swift */,
+				5E8700932A2B1A2700703AD7 /* PhotoViewController.swift */,
 				5E50E5392A1E0C3D00FF43D4 /* SelectCameraViewController.swift */,
 				5E50E5332A1A160000FF43D4 /* ImageViewController.swift */,
 				5E50E5372A1E0C2C00FF43D4 /* CameraViewController.swift */,
@@ -183,7 +183,7 @@
 				5E50E5382A1E0C2C00FF43D4 /* CameraViewController.swift in Sources */,
 				5E50E51C2A19F32900FF43D4 /* SceneDelegate.swift in Sources */,
 				5E50E53A2A1E0C3D00FF43D4 /* SelectCameraViewController.swift in Sources */,
-				5E50E52E2A1A0B9600FF43D4 /* PhotoCollectionViewController.swift in Sources */,
+				5E8700942A2B1A2800703AD7 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

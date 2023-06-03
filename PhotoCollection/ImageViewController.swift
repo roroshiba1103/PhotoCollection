@@ -47,9 +47,11 @@ class ImageViewController: UIViewController, UINavigationControllerDelegate, UII
         // 作成するテキストファイルの名前
         let fileName = "\(NSUUID().uuidString).png"
         // DocumentディレクトリのfileURLを取得
-        // ディレクトリのパスにファイル名をつなげてファイルのフルパスを作る
-        let path = documentDirectoryFileURL.appendingPathComponent(fileName)
-        documentDirectoryFileURL = path
+        if documentDirectoryFileURL != nil {
+            // ディレクトリのパスにファイル名をつなげてファイルのフルパスを作る
+            let path = documentDirectoryFileURL.appendingPathComponent(fileName)
+            documentDirectoryFileURL = path
+        }
     }
     
     func createItem(item: PhotoItem) {
@@ -69,7 +71,7 @@ class ImageViewController: UIViewController, UINavigationControllerDelegate, UII
             //エラー処理
             print("エラー")
         }
-        item.cameraMakerNumber = selectedMakerNumber ?? 0
+        item.cameraMakerNumber = selectedMakerNumber!
         item.photoURL = documentDirectoryFileURL.absoluteString
         createItem(item: item)
     }
