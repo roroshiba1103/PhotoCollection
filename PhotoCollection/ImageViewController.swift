@@ -12,6 +12,8 @@ class ImageViewController: UIViewController, UINavigationControllerDelegate, UII
     
     @IBOutlet var photoImageView: UIImageView!
     
+    var selectedMakerNumber: Int?
+    
     let realm = try! Realm()
     
     var documentDirectoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
@@ -44,16 +46,20 @@ class ImageViewController: UIViewController, UINavigationControllerDelegate, UII
     func createLocalDataFile() {
         // 作成するテキストファイルの名前
         let fileName = "\(NSUUID().uuidString).png"
-
         // DocumentディレクトリのfileURLを取得
-        if documentDirectoryFileURL != nil {
-            // ディレクトリのパスにファイル名をつなげてファイルのフルパスを作る
-            let path = documentDirectoryFileURL.appendingPathComponent(fileName)
-            documentDirectoryFileURL = path
+        // ディレクトリのパスにファイル名をつなげてファイルのフルパスを作る
+        let path = documentDirectoryFileURL.appendingPathComponent(fileName)
+        documentDirectoryFileURL = path
+    }
+    
+    func createItem(item: PhotoItem) {
+        try! realm.write {
+            realm.add(item)
         }
     }
     
-    func saveImage() {
+    func saveData() {
+        let item = PhotoItem()
         createLocalDataFile()
         //pngで保存する場合
         let pngImageData = photoImageView.image?.pngData()
@@ -63,6 +69,9 @@ class ImageViewController: UIViewController, UINavigationControllerDelegate, UII
             //エラー処理
             print("エラー")
         }
+        item.cameraMakerNumber = selectedMakerNumber ?? 0
+        item.photoURL = documentDirectoryFileURL.absoluteString
+        createItem(item: item)
     }
     
     @IBAction func onTappedCancelButton(_ sender: Any) {
@@ -71,7 +80,8 @@ class ImageViewController: UIViewController, UINavigationControllerDelegate, UII
     
     @IBAction func onTappedUploadButton() {
         if photoImageView.image != nil {
-            saveImage()
+            saveData()
+            self.dismiss(animated: true)
         } else {
             print("画像がありません")
         }

@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 private let reuseIdentifier = "Cell"
 
 class PhotoCollectionViewController: UICollectionViewController {
+    
+    let realm = try! Realm()
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -9,6 +9,6 @@ import Foundation
 import RealmSwift
 
 class PhotoItem: Object {
-    @Persisted var cameraMakerNumber: Int = 0
-    
+    @objc var cameraMakerNumber: Int = 0
+    @objc var photoURL: String = ""
 }

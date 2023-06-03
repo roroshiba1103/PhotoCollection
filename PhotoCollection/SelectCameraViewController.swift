@@ -13,6 +13,8 @@ class SelectCameraViewController: UIViewController, UITableViewDelegate, UITable
     
     @IBOutlet weak var selectCameraTableView: UITableView!
     
+    var selectedNumber: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         selectCameraTableView.register(UINib(nibName: "SelectCameraTableViewCell", bundle: nil), forCellReuseIdentifier: "SelectCameraTableViewCell")
@@ -43,26 +45,18 @@ class SelectCameraViewController: UIViewController, UITableViewDelegate, UITable
         return cell
     }
     
-    /*
     func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
-        selectedImage = UIImage(named: imgArray[indexPath.row] as! String)
-        if selectedImage != nil {
-            performSegue(withIdentifier: "toSubViewController",sender: nil)
-        }
-    }
-    */
-    
-    func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
+        selectedNumber = indexPath.row
         performSegue(withIdentifier: "toImageViewController",sender: nil)
     }
-    /*
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-        if (segue.identifier == "toSubViewController") {
-            let subVC: SubViewController = (segue.destination as? SubViewController)!
-            subVC.selectedImg = selectedImage
+        if (segue.identifier == "toImageViewController") {
+            let imgVC: ImageViewController = (segue.destination as? ImageViewController)!
+            imgVC.selectedMakerNumber = selectedNumber
         }
     }
-    */
+    
 
     /*
     // MARK: - Navigation
