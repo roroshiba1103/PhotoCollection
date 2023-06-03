@@ -6,10 +6,17 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ImageViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet var photoImageView: UIImageView!
+    
+    let realm = try! Realm()
+    
+    var documentDirectoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+    
+    let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +41,40 @@ class ImageViewController: UIViewController, UINavigationControllerDelegate, UII
         photoImageView.image = info[.originalImage] as? UIImage
     }
     
-    @IBAction func onTappedButton(_ sender: Any) {
+    func createLocalDataFile() {
+        // 作成するテキストファイルの名前
+        let fileName = "\(NSUUID().uuidString).png"
+
+        // DocumentディレクトリのfileURLを取得
+        if documentDirectoryFileURL != nil {
+            // ディレクトリのパスにファイル名をつなげてファイルのフルパスを作る
+            let path = documentDirectoryFileURL.appendingPathComponent(fileName)
+            documentDirectoryFileURL = path
+        }
+    }
+    
+    func saveImage() {
+        createLocalDataFile()
+        //pngで保存する場合
+        let pngImageData = photoImageView.image?.pngData()
+        do {
+            try pngImageData!.write(to: documentDirectoryFileURL)
+        } catch {
+            //エラー処理
+            print("エラー")
+        }
+    }
+    
+    @IBAction func onTappedCancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func onTappedUploadButton() {
+        if photoImageView.image != nil {
+            saveImage()
+        } else {
+            print("画像がありません")
+        }
     }
 
     /*
