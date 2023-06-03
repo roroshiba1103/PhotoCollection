@@ -10,5 +10,5 @@ import RealmSwift
 
 class PhotoItem: Object {
     @objc var cameraMakerNumber: Int = 0
-    @objc var photoURL: String = ""
+    @objc var photoData: Data?
 }

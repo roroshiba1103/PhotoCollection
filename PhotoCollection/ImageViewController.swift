@@ -15,10 +15,6 @@ class ImageViewController: UIViewController, UINavigationControllerDelegate, UII
     var selectedMakerNumber: Int?
     
     let realm = try! Realm()
-    
-    var documentDirectoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-    
-    let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,17 +39,6 @@ class ImageViewController: UIViewController, UINavigationControllerDelegate, UII
         photoImageView.image = info[.originalImage] as? UIImage
     }
     
-    func createLocalDataFile() {
-        // 作成するテキストファイルの名前
-        let fileName = "\(NSUUID().uuidString).png"
-        // DocumentディレクトリのfileURLを取得
-        if documentDirectoryFileURL != nil {
-            // ディレクトリのパスにファイル名をつなげてファイルのフルパスを作る
-            let path = documentDirectoryFileURL.appendingPathComponent(fileName)
-            documentDirectoryFileURL = path
-        }
-    }
-    
     func createItem(item: PhotoItem) {
         try! realm.write {
             realm.add(item)
@@ -62,17 +47,10 @@ class ImageViewController: UIViewController, UINavigationControllerDelegate, UII
     
     func saveData() {
         let item = PhotoItem()
-        createLocalDataFile()
-        //pngで保存する場合
-        let pngImageData = photoImageView.image?.pngData()
-        do {
-            try pngImageData!.write(to: documentDirectoryFileURL)
-        } catch {
-            //エラー処理
-            print("エラー")
-        }
         item.cameraMakerNumber = selectedMakerNumber!
-        item.photoURL = documentDirectoryFileURL.absoluteString
+        if let photoData = photoImageView.image {
+            item.photoData = photoData.jpegData(compressionQuality: 0.5)
+        }
         createItem(item: item)
     }
     
