@@ -21,13 +21,6 @@ class SelectCameraViewController: UIViewController, UITableViewDelegate, UITable
         selectCameraTableView.rowHeight = 100
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 5
-    }
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 5
-    }
-    
     func tableView(in tableView: UITableView) -> Int {
         return 1
     }

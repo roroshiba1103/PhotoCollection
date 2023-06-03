@@ -18,8 +18,14 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: 125, height: 125)
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        photoCollectionView.collectionViewLayout = layout
+        
         items = readItems()
     }
     
