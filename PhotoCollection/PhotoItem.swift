@@ -9,6 +9,6 @@ import Foundation
 import RealmSwift
 
 class PhotoItem: Object {
-    @objc var cameraMakerNumber: Int = 0
-    @objc var photoData: Data?
+    @Persisted var cameraMakerNumber: Int = 0
+    @Persisted var photoData: Data?
 }

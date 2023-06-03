@@ -41,13 +41,8 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCollectionCell", for: indexPath)
         let photoImageView = cell.contentView.viewWithTag(1) as! UIImageView
         
-        print(items.count)
-        
-        for i in 0..<items.count {
-            print(items[i].cameraMakerNumber)
-            if items[i].photoData != nil {
-                photoImageView.image = UIImage(data: items[i].photoData!)
-            }
+        if items[indexPath.row].photoData != nil {
+            photoImageView.image = UIImage(data: items[indexPath.row].photoData!)
         }
         
         return cell
