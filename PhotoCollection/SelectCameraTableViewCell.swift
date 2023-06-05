@@ -9,8 +9,6 @@ import UIKit
 
 class SelectCameraTableViewCell: UITableViewCell {
     
-    //let cameraArray: Array = ["Canon", "Nikon", "SONY", "FUJIFILM", "Panasonic", "OLYMPUS", "PENTAX", "LEICA", "Hasselblad"]
-    
     @IBOutlet weak var cameraLabel: UILabel!
     @IBOutlet weak var cameraImage: UIImageView!
     

@@ -13,14 +13,20 @@ class CameraViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var cameraTableView: UITableView!
     
+    var cameraNumber: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         cameraTableView.register(UINib(nibName: "SelectCameraTableViewCell", bundle: nil), forCellReuseIdentifier: "SelectCameraTableViewCell")
         cameraTableView.rowHeight = 100
     }
     
+    func tableView(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 9
+        return cameraArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -33,7 +39,16 @@ class CameraViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
+        cameraNumber = indexPath.row
         performSegue(withIdentifier: "toCameraPhotoViewController",sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "toCameraPhotoViewController") {
+            let cmrphtVC: CameraPhotoViewController = (segue.destination as? CameraPhotoViewController)!
+            cmrphtVC.cameraNumber = cameraNumber!
+            cmrphtVC.cameraArray = cameraArray
+        }
     }
 
     /*
