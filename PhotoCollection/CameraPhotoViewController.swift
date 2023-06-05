@@ -20,7 +20,9 @@ class CameraPhotoViewController: UIViewController, UICollectionViewDelegate, UIC
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = cameraArray[cameraNumber!]
+        print(cameraNumber!)
+        print(cameraArray[cameraNumber!])
+        self.navigationItem.title = cameraArray[cameraNumber!]
 
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 125, height: 125)
@@ -30,6 +32,7 @@ class CameraPhotoViewController: UIViewController, UICollectionViewDelegate, UIC
         cameraPhotoCollectionView.collectionViewLayout = layout
         
         items = readItems()
+        cameraPhotoCollectionView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,16 +41,16 @@ class CameraPhotoViewController: UIViewController, UICollectionViewDelegate, UIC
     }
     
     func readItems() -> [PhotoItem] {
-        return Array(realm.objects(PhotoItem.self).filter("cameraMakerNumber == %@", cameraNumber ))
+        return Array(realm.objects(PhotoItem.self).filter("cameraMakerNumber == %@", cameraNumber!))
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            
-        let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cameraPhotoCollectionCell", for: indexPath)
+        
+        let cell :UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cameraPhotoCollectionCell", for: indexPath)
         let cameraPhotoImageView = cell.contentView.viewWithTag(1) as! UIImageView
         
         if items[indexPath.row].photoData != nil {

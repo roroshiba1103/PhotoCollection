@@ -27,6 +27,7 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         photoCollectionView.collectionViewLayout = layout
         
         items = readItems()
+        photoCollectionView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
