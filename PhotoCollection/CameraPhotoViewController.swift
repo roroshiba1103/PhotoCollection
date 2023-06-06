@@ -10,6 +10,8 @@ import RealmSwift
 
 class CameraPhotoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    @IBOutlet weak var titleNavigationItem: UINavigationItem!
+    
     @IBOutlet weak var cameraPhotoCollectionView: UICollectionView!
     
     let realm = try! Realm()
@@ -20,9 +22,8 @@ class CameraPhotoViewController: UIViewController, UICollectionViewDelegate, UIC
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(cameraNumber!)
-        print(cameraArray[cameraNumber!])
-        self.navigationItem.title = cameraArray[cameraNumber!]
+        
+        titleNavigationItem.title = cameraArray[cameraNumber!]
 
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 125, height: 125)

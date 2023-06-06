@@ -294,6 +294,7 @@ Cg
                     </view>
                     <connections>
                         <outlet property="cameraPhotoCollectionView" destination="dCJ-fc-nDF" id="YaQ-kA-Rk3"/>
+                        <outlet property="titleNavigationItem" destination="Gus-GK-U3F" id="NZq-08-apm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dDs-kK-l22" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
