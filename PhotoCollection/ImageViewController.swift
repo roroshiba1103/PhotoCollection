@@ -63,7 +63,14 @@ class ImageViewController: UIViewController, UINavigationControllerDelegate, UII
             saveData()
             self.dismiss(animated: true)
         } else {
-            print("画像がありません")
+            let alert = UIAlertController (
+            title: "画像が選択されていません",
+            message: "アルバムに追加したい写真を選択して下さい",
+            preferredStyle: .alert
+            )
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in self.presentPickerController(sourceType: .photoLibrary) }))
+            self.present(alert, animated: true, completion: nil)
+            
         }
     }
 

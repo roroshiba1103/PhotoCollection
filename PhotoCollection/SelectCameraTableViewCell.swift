@@ -11,6 +11,7 @@ class SelectCameraTableViewCell: UITableViewCell {
     
     @IBOutlet weak var cameraLabel: UILabel!
     @IBOutlet weak var cameraImage: UIImageView!
+    @IBOutlet weak var mainBackground: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
