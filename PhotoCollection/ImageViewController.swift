@@ -11,6 +11,8 @@ import RealmSwift
 class ImageViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet var photoImageView: UIImageView!
+    @IBOutlet var saveButton: UIButton!
+    @IBOutlet var cancelButton: UIButton!
     
     var selectedMakerNumber: Int?
     

@@ -78,7 +78,7 @@ Cg
                     <navigationItem key="navigationItem" id="bG8-BG-4NC"/>
                     <connections>
                         <outlet property="selectCameraTableView" destination="hGM-4p-uPE" id="pWs-Wy-HpH"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toImageViewController" modalPresentationStyle="fullScreen" id="e8O-6G-TCg"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toImageViewController" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="e8O-6G-TCg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KOA-0P-yDP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -140,7 +140,9 @@ Cg
                     </view>
                     <navigationItem key="navigationItem" id="UoV-sA-HWi"/>
                     <connections>
+                        <outlet property="cancelButton" destination="g74-hD-rvG" id="QOa-I8-Sud"/>
                         <outlet property="photoImageView" destination="Jeu-R7-fXm" id="M3O-dk-imV"/>
+                        <outlet property="saveButton" destination="zmI-H9-wmC" id="kJS-WY-MPt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -272,7 +274,7 @@ Cg
                     <tabBarItem key="tabBarItem" title="メーカー別写真" image="camera.on.rectangle.fill" catalog="system" id="LIL-EJ-7En"/>
                     <connections>
                         <outlet property="cameraTableView" destination="E8v-FE-2mT" id="28R-Hd-Tso"/>
-                        <segue destination="eFk-TP-vMo" kind="presentation" identifier="toCameraPhotoViewController" modalPresentationStyle="fullScreen" id="BvM-fv-kWr"/>
+                        <segue destination="eFk-TP-vMo" kind="presentation" identifier="toCameraPhotoViewController" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="BvM-fv-kWr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g7g-pc-KnP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -344,6 +346,7 @@ Cg
                             <constraint firstItem="S28-4g-ceA" firstAttribute="trailing" secondItem="Gnf-KL-Evl" secondAttribute="trailing" id="xdl-dw-LZd"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="CZ6-yP-N0K"/>
                     <connections>
                         <outlet property="cameraPhotoCollectionView" destination="dCJ-fc-nDF" id="YaQ-kA-Rk3"/>
                         <outlet property="titleNavigationItem" destination="Gus-GK-U3F" id="NZq-08-apm"/>

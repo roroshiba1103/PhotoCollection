@@ -23,6 +23,7 @@
 		5E8700902A2AE03D00703AD7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5E87008F2A2AE03D00703AD7 /* RealmSwift */; };
 		5E8700922A2AF05C00703AD7 /* PhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8700912A2AF05C00703AD7 /* PhotoItem.swift */; };
 		5E8700942A2B1A2800703AD7 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8700932A2B1A2700703AD7 /* PhotoViewController.swift */; };
+		5E8700962A3827FA00703AD7 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E8700952A3827F900703AD7 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		5E87008A2A295D9E00703AD7 /* CameraPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPhotoViewController.swift; sourceTree = "<group>"; };
 		5E8700912A2AF05C00703AD7 /* PhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItem.swift; sourceTree = "<group>"; };
 		5E8700932A2B1A2700703AD7 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		5E8700952A3827F900703AD7 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				5E50E51D2A19F32900FF43D4 /* ViewController.swift */,
 				5E50E51F2A19F32900FF43D4 /* Main.storyboard */,
 				5E50E5222A19F32B00FF43D4 /* Assets.xcassets */,
+				5E8700952A3827F900703AD7 /* icon.png */,
 				5E50E5242A19F32B00FF43D4 /* LaunchScreen.storyboard */,
 				5E50E5272A19F32B00FF43D4 /* Info.plist */,
 				5E8700932A2B1A2700703AD7 /* PhotoViewController.swift */,
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E50E5262A19F32B00FF43D4 /* LaunchScreen.storyboard in Resources */,
+				5E8700962A3827FA00703AD7 /* icon.png in Resources */,
 				5E50E5232A19F32B00FF43D4 /* Assets.xcassets in Resources */,
 				5E50E53E2A1E184600FF43D4 /* SelectCameraTableViewCell.xib in Resources */,
 				5E50E5212A19F32900FF43D4 /* Main.storyboard in Resources */,

@@ -33,6 +33,7 @@ class CameraViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = tableView.dequeueReusableCell(withIdentifier: "SelectCameraTableViewCell", for: indexPath) as! SelectCameraTableViewCell
         cell.cameraLabel?.text = cameraArray[indexPath.row]
         cell.cameraImage.image = UIImage(systemName: "camera.fill")
+        cell.cameraImage.tintColor = .gray
         cell.mainBackground.layer.cornerRadius = 5
         cell.mainBackground.backgroundColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.0)
         return cell
